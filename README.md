@@ -10,7 +10,7 @@ Finally, we plot the distribution of the mean sample.
 
 ## Getting Started
 
-After cloning the repository, create a conda environment and run the following command:
+After cloning the repository, run the following command to create a conda environment:
 ```shell
 git env create -f environment.yml
 ```
