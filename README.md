@@ -9,3 +9,5 @@ The user can choose the size of the random sample ($n$) and the probability ($p$
 Finally, we plot the distribution of the mean sample.
 
 ## Getting Started
+
+After cloning the repository, create a conda environment and run the following command:
