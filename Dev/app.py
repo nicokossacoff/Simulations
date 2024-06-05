@@ -8,7 +8,8 @@ app.layout = html.Div([
     dcc.Markdown('''
                  Calculates a thousand sample means from random samples with `n` observations. Each observation is a Bernoulli test with probability `p`.
                  '''),
-    dcc.Dropdown([50, 200, 500, 1000], value= 50, id= "sample-size"),
+    # dcc.Dropdown([50, 200, 500, 1000], value= 50, id= "sample-size"),
+    dcc.Slider(min= 100, max= 1000, step= 100, value= 100, id= "sample-size", tooltip= {"placement": "bottom", "always_visible": True}),
     dcc.Dropdown([.1, .35, .5, .75], value= .35, id= "probability"),
     dcc.Graph(id= "dist-graph")
 ])
