@@ -5,7 +5,9 @@ app = Dash(__name__)
 
 app.layout = html.Div([
     html.H1(children= "Sample Mean Distribution"),
-    html.H4(children= "Calculates a thousand sample means from random samples with n observations. Each observation is a Bernoulli test with probability p."),
+    dcc.Markdown('''
+                 Calculates a thousand sample means from random samples with `n` observations. Each observation is a Bernoulli test with probability `p`.
+                 '''),
     dcc.Dropdown([50, 200, 500, 1000], value= 50, id= "sample-size"),
     dcc.Dropdown([.1, .35, .5, .75], value= .35, id= "probability"),
     dcc.Graph(id= "dist-graph")
