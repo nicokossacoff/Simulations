@@ -14,3 +14,9 @@ After cloning the repository, run the following command to create a conda enviro
 ```shell
 git env create -f environment.yml
 ```
+
+Run the following command to start the app
+```shell
+cd ~\Simulations\Dev # Make sure the Dev folder is your current working directory
+python app.py
+```
