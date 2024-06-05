@@ -9,8 +9,16 @@ app.layout = html.Div([
                  Calculates a thousand sample means from random samples with `n` observations. Each observation is a Bernoulli test with probability `p`.
                  '''),
     # dcc.Dropdown([50, 200, 500, 1000], value= 50, id= "sample-size"),
-    dcc.Slider(min= 100, max= 1000, step= 100, value= 100, id= "sample-size", tooltip= {"placement": "bottom", "always_visible": True}),
-    dcc.Dropdown([.1, .35, .5, .75], value= .35, id= "probability"),
+    html.Div(children= [
+        html.Div(children= [
+            html.H5(children= "Sample size:"),
+            dcc.Slider(min= 100, max= 1000, step= 100, value= 100, id= "sample-size", tooltip= {"placement": "bottom", "always_visible": True})
+        ], style= dict(width= "50%")),
+        html.Div(children= [
+            html.H5(children= "Probability:"),
+            dcc.Dropdown([.1, .35, .5, .75], value= .35, id= "probability")
+        ], style= dict(width= "50%"))
+    ], style= dict(display= "flex")),
     dcc.Graph(id= "dist-graph")
 ])
 
